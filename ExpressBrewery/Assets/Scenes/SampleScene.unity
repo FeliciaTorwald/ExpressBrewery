@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 715500494}
   - component: {fileID: 715500498}
   m_Layer: 0
-  m_Name: Cat
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,6 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  heldHerb: 11
+  hand: {fileID: 179288433}
 --- !u!50 &715500495
 Rigidbody2D:
   serializedVersion: 4
@@ -347,7 +349,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1c9b08c8f3f307846a3a57f10f1686a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28cc63ee754bcc24da53f7c4d80b0574, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -367,8 +369,8 @@ Transform:
   m_GameObject: {fileID: 715500493}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 0.87, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -1.1186, y: 0.5386, z: 0}
+  m_LocalScale: {x: 1.0592124, y: 1.0592124, z: 1.0592124}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 179288433}
@@ -410,7 +412,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.16, y: 12.16}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 12.16, y: 12.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -465,7 +467,6 @@ GameObject:
   - component: {fileID: 1407813198}
   - component: {fileID: 1407813199}
   - component: {fileID: 1407813200}
-  - component: {fileID: 1407813201}
   - component: {fileID: 1407813202}
   m_Layer: 0
   m_Name: Square (2)
@@ -586,20 +587,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1407813201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407813197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7cafa2ed28b91545bd219ae5f5946f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  herb: {fileID: 0}
-  hand: {fileID: 0}
 --- !u!50 &1407813202
 Rigidbody2D:
   serializedVersion: 4
@@ -638,7 +625,6 @@ GameObject:
   - component: {fileID: 1419097298}
   - component: {fileID: 1419097299}
   - component: {fileID: 1419097300}
-  - component: {fileID: 1419097301}
   - component: {fileID: 1419097302}
   m_Layer: 0
   m_Name: Square (3)
@@ -759,20 +745,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1419097301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419097297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7cafa2ed28b91545bd219ae5f5946f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  herb: {fileID: 0}
-  hand: {fileID: 0}
 --- !u!50 &1419097302
 Rigidbody2D:
   serializedVersion: 4
@@ -895,8 +867,8 @@ GameObject:
   - component: {fileID: 1731654564}
   - component: {fileID: 1731654565}
   - component: {fileID: 1731654566}
-  - component: {fileID: 1731654567}
   - component: {fileID: 1731654568}
+  - component: {fileID: 1731654569}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -1016,20 +988,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1731654567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731654563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7cafa2ed28b91545bd219ae5f5946f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  herb: {fileID: 0}
-  hand: {fileID: 0}
 --- !u!50 &1731654568
 Rigidbody2D:
   serializedVersion: 4
@@ -1057,6 +1015,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1731654569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731654563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7cafa2ed28b91545bd219ae5f5946f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herb: {fileID: 3958283773735818023, guid: 6436fbf522f184e4084ce39ce690ecf1, type: 3}
+  hand: {fileID: 179288433}
 --- !u!1 &1767095141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1829452825}
   - component: {fileID: 1829452824}
+  - component: {fileID: 1829452826}
   m_Layer: 0
   m_Name: Kettle
   m_TagString: Untagged
@@ -1314,6 +1287,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829452826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829452823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af24cee6ef02953498830f8211b3ac8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herbsInside: 
+  player: {fileID: 715500494}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
